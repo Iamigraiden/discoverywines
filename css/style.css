@@ -3,8 +3,17 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
+html,body{
+    height: 100%;
+    width: 100%;
     overflow-x: hidden;
+    background: black;
+    z-index: -1;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
 .index-page-main{
     position: relative;
@@ -24,7 +33,62 @@ body{
 .copyright{
     opacity: .6;
 }
-@media screen and (width<662px) {
+/* .home-page styling */
+.home-page{
+    background:black ;
+    overflow-x: hidden;
+}
+.search-bar{
+    position: fixed;
+    width: 100%;
+    padding: 6rem 0 2rem;
+    background-color: black;
+    z-index: 2;
+}
+.category{
+    padding-top: 12rem;
+}
+.all-cate{
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(5rem,1fr));
+   /* grid-template-columns: repeat(6, 4rem); */
+   /* overflow: scroll; */
+   gap: 1rem;
+
+}
+.all-cate::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.all-cate .grid-cols .category-title{
+    font-size: .8rem;
+    font-weight: 300;
+}
+.banner-img{
+    position: relative;
+}
+.banner-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footer-end p{
+    font-size: .7rem;
+    opacity: .7;
+}
+
+@media screen and (max-width: 667px) {
+    html,body{
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+    }
     .lead {
         font-size: 1rem;
         font-weight: 300;
