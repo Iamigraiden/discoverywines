@@ -41,18 +41,23 @@ a{
 .search-bar{
     position: fixed;
     width: 100%;
-    padding: 6rem 0 2rem;
+    padding: 3rem 0 2rem;
     background-color: black;
     z-index: 2;
 }
+.search-input::placeholder{
+   font-size: 14px;
+}
 .category{
-    padding-top: 12rem;
+    padding-top: 8rem;
 }
 .all-cate{
     display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(5rem,1fr));
+   grid-template-columns: repeat(auto-fit, 5rem );
+   justify-content: center;
+   /* grid-template-columns: repeat(auto-fit, minmax(5rem,1fr)); */
    /* grid-template-columns: repeat(6, 4rem); */
-   /* overflow: scroll; */
+   overflow: scroll;
    gap: 1rem;
 
 }
@@ -82,7 +87,33 @@ a{
     font-size: .7rem;
     opacity: .7;
 }
+/* category page styling */
+.category-head{
+    position: fixed;
+    width: 100%;
+    padding: 3rem 0 1rem;
+    background-color: black;
+    z-index: 2;
+}
+.cate-product{
+    padding-top: 8rem;
+}
+.cateproduct-image{
+    height: 200px;
+    overflow: hidden;
+}
+.cateproduct-image img{
+    height: inherit;
+    object-fit: cover;
 
+}
+.product-content .product-catename{
+    font-size: .6rem !important;
+}
+.product-content .product-title{
+    font-size: .7rem !important;
+
+}
 @media screen and (max-width: 667px) {
     html,body{
       height: 100%;
