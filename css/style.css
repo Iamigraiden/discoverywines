@@ -24,16 +24,6 @@ a{
 .category-title{
     color: white;
 }
-.back-img{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: -1;
-}
 .copyright{
     opacity: .6;
 }
@@ -42,10 +32,10 @@ a{
     background:black ;
     overflow-x: hidden;
 }
-.search-bar{
+.search-bar-fixed{
     position: fixed;
     width: 100%;
-    padding: 3rem 0 2rem;
+    padding: 3rem 0 1rem;
     background-color: black;
     z-index: 2;
 }
@@ -92,7 +82,7 @@ a{
     width: 0;
     height: 0;
 }
-.all-cate .grid-cols .category-title{
+.category-title{
     font-size: .8rem;
     font-weight: 300;
 }
@@ -156,9 +146,18 @@ a{
     position: relative;
 }
 .discrip-img{
-    position: fixed; 
-    right:28%;
+    position: fixed;
+    width: 130px;
+    height: 250px;
+    right: 28%;
+    overflow: hidden;
     z-index: -1;
+}
+.discrip-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .after-border::after{
     background: white;
@@ -242,4 +241,46 @@ font-weight: bold
         font-size: 1rem;
         font-weight: 300;
     }
+}
+
+/* search form css */
+.list_search_drop {
+    background: #fff;
+    opacity: 0;
+    max-height: 350px;
+    z-index: 9 !important;
+    position: absolute;
+    border-radius: 0px ;
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: ease .5s;
+}
+.showdrop{
+    opacity: 1;
+}
+ul#product_list {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+ul#product_list li{
+    list-style: none;   
+}
+ .search-form {
+    /* position: relative; */
+    left: 0px;
+    z-index: 1;
+    /* width: 100%; */
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.5sease;
+    /* -moz-transition: all 0.5s ease; */
+    transition: all 0.5sease;
+    top: 7px;
+    /* padding: 7px; */
+    border-radius: 5px;
+    transform: scaleY(1);
+    /* box-shadow: 0px 4px 7px #0000003b; */
+    padding: 0;
+    border-radius: 50px;
 }
