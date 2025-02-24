@@ -246,7 +246,7 @@ font-weight: bold
 /* search form css */
 .list_search_drop {
     background: #fff;
-    opacity: 0;
+    display: none;
     max-height: 350px;
     z-index: 9 !important;
     position: absolute;
@@ -254,10 +254,9 @@ font-weight: bold
     margin-top: 10px;
     width: 100%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    transition: ease .5s;
 }
 .showdrop{
-    opacity: 1;
+    display: block;
 }
 ul#product_list {
     max-height: 300px;
@@ -266,21 +265,6 @@ ul#product_list {
 ul#product_list li{
     list-style: none;   
 }
- .search-form {
-    /* position: relative; */
-    left: 0px;
-    z-index: 1;
-    /* width: 100%; */
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: all 0.5sease;
-    /* -moz-transition: all 0.5s ease; */
-    transition: all 0.5sease;
-    top: 7px;
-    /* padding: 7px; */
-    border-radius: 5px;
-    transform: scaleY(1);
-    /* box-shadow: 0px 4px 7px #0000003b; */
-    padding: 0;
-    border-radius: 50px;
+ul#product_list li a p{
+    padding-left: 10px;
 }
